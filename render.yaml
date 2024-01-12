@@ -1,11 +1,11 @@
 databases:
-  - name: app-deploy-render
-    databaseName: app-deploy-render
+  - name: appdeployrender
+    databaseName: appdeployrender
     user: mysite
 
 services:
   - type: web
-    name: app-deploy-render
+    name: appdeployrender
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
