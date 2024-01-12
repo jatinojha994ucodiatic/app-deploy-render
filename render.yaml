@@ -1,5 +1,5 @@
 databases:
-  - name: App-Deploy-Render
+  - name: appdeployrender
     databaseName: app_deploy_render_production
     user: mysite
     plan: free
