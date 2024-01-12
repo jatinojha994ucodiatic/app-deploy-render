@@ -1,21 +1,19 @@
 databases:
-  - name: appdeployrender
-    databaseName: app_deploy_render_production
+  - name: app-deploy-render
+    databaseName: app-deploy-render
     user: mysite
-    plan: free
 
 services:
   - type: web
-    name: mysite
+    name: app-deploy-render
     runtime: ruby
-    plan: free
     buildCommand: "./bin/render-build.sh"
     # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "./bin/rails server"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: app_deploy_render_production
+          name: mysite
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
