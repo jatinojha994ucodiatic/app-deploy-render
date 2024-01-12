@@ -1,6 +1,6 @@
 databases:
   - name: App-Deploy-Render
-    databaseName: mysite
+    databaseName: app_deploy_render_production
     user: mysite
     plan: free
 
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: app_deploy_render_production
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
