@@ -7,3 +7,4 @@ bundle install
 ./bin/rails assets:clean
 
 bundle exec rake db:migrate
+exec rake bin/server
