@@ -24,8 +24,8 @@
   <div>
     <%= form.label :image, style: "display: block" %>
     
-    <% if post.image %>
-      <%= image_tag(image) %>      
+    <% if post.image.attached? %>
+      <%= image_tag(post.image) %>      
     <% end %>
     
     <%= form.file_field :image %>
