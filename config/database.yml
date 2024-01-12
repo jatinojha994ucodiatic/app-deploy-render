@@ -21,7 +21,6 @@ default: &default
   username: root
   password: root
   host: localhost
-
 development:
   <<: *default
   database: app_deploy_render_development
