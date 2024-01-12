@@ -2,7 +2,7 @@ databases:
   - name: appdeployrender
     databaseName: appdeployrender
     user: mysite
-
+    plan: free
 services:
   - type: web
     name: appdeployrender
